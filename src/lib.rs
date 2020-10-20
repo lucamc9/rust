@@ -930,7 +930,7 @@ impl TensorType for String {
 
 ////////////////////////
 
-pub(crate) trait AnyTensor: Debug {
+pub trait AnyTensor: Debug {
     fn inner(&self) -> Result<*mut tf::TF_Tensor>;
 
     fn data_type(&self) -> DataType;
